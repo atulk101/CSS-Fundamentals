@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preference to CSS Rules</title>
+    <style>
+        #outer a {
+            background-color: red;
+        }
+
+        #outer #inner a {
+            background-color: blue;
+        }
+
+        #outer div ul li a {
+            color: yellow;
+        }
+
+        #outer div ul .nav a {
+            color: white;
+        }
+
+        div div li:nth-child(2) a:hover {
+            border: 10px solid black;
+        }
+
+        div li:nth-child(2) a:hover {
+            border: 10px dashed black;
+        }
+
+        div div .nav:nth-child(2) a:hover {
+            border: 10px double black;
+        }
+
+        a {
+            display: inline-block;
+            line-height: 40px;
+            font-size: 20px;
+            text-decoration: none;
+            text-align: center;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        #winning {
+            background-color: red;
+            border: 2px solid black;
+        }
+        
+        .better {
+            background-color: gray;
+            /* border: none !important; */
+        }
+
+        p {
+            background-color: blue;
+            color: white;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="outer" class="container">
+        <div id="inner" class="container">
+            <ul>
+                <li class="nav"><a href="#">One</a></li>
+                <li class="nav"><a href="#">Two</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="better">This is a paragraph.</p>
+    <p class="better" id="winning">One selector to rule them all!</p>
+</body>
+
+</html>

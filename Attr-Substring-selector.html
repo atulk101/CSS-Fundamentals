@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute substring matching selectors</title>
+    <style>
+        li[class$="a"] {
+            background-color:royalblue ;
+        }
+        li[class^="a"] {
+            color:red;
+        }
+        li[class*="a"] {
+            color: rgb(9, 231, 9)
+        }
+    </style>
+</head>
+<body>
+    <h1>Attribute substring matching selectors</h1>
+<ul>
+    <li class="a">Item 1</li>
+    <li class="ab">Item 2</li>
+    <li class="bca">Item 3</li>
+    <li class="bcbc">Item 4</li>
+</ul>
+</body>
+</html>
